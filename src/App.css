@@ -1,24 +1,105 @@
-.App {
-  text-align: center;
+#root {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.flex_column {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
+.overlay {
+  display: flex;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  z-index: 50;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+.overlay_shown {
+  opacity: 1;
+}
+
+.overlay_hidden {
+  display: none;
+  opacity: 0;
+}
+
+.overlay_card {
+  width: 200px;
+  height: 100px;
+  border-radius: 10px;
+  z-index: 51;
+  background-color: rgb(256, 256, 256);
+  display: flex;
+  justify-content: center;
+}
+
+form {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+}
+
+input {
+	text-align: center;
+	width: 120px;
+	border-radius: 5px;
+	margin-bottom: 10px;
+}
+
+.logout_button,
+.login_button {
+  width: 200px;
+  height: 60px;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 30px;
+  font-size: 25px;
+  margin: 50px;
+  transition: all .3s ease-out;
+}
+
+.logout_button:hover, .logout_button:active,
+.login_button:hover, .login_button:active {
+	box-shadow: inset 0 0 40px rgba(256, 256, 256, 0.3);
+}
+
+.logout_button {
+  background-color: rgb(212, 78, 78);
+}
+
+.login_button {
+  background-color: rgb(95, 215, 95);
+}
+
+pre {
+  border: 0.5px solid black;
+  background-color: rgba(0, 0, 0, 0.9);
+  border-radius: 7px;
+  padding: 10px;
   color: white;
 }
 
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.highlight {
+	background-color: green;
+	transition: transform .5s linear;
+	-webkit-transition: -webkit-transform .5s linear;
 }
